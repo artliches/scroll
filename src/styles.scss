@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+$english-violet: #50475A;
+$columbia-blue: #B9CED6;
+$chartreuse: #D2F231;
+
+@font-face {
+    font-family: "Oxanium";
+    src: local("Oxanium"), url(./assets/fonts/Oxanium.ttf) format('opentype');
+    font-weight: 100 1000;
+}
+
+body {
+    font-family: 'Oxanium';
+    background-color: black;
+    color: white;
+}
+
+.drift-card {
+    border-radius: 5px;
+    background-color: $english-violet;
+    color: white;
+    border: 2px solid $chartreuse;
+    padding: 1rem;
+    box-shadow: 10px 10px 0px 0px $chartreuse;
+}
