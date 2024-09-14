@@ -12,6 +12,17 @@ body {
     font-family: 'Oxanium';
     background-color: black;
     color: white;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+input {
+    text-transform: capitalize;
+    font-family: 'Oxanium';
+    background-color: $english-violet;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
 }
 
 .drift-card {
@@ -21,4 +32,38 @@ body {
     border: 2px solid $chartreuse;
     padding: 1rem;
     box-shadow: 10px 10px 0px 0px $chartreuse;
+    .card-title {
+        margin-bottom: 0.5rem;
+        border-bottom: 1px solid white;
+        h2 {
+            margin: 0;
+            font-size: 1rem
+        }
+        &.title-input {
+            display: grid;
+            grid-gap: 1rem;
+            align-items: center;
+            grid-template-columns: auto 1fr;
+            input {
+                font-size: 1rem;
+                border: none;
+                letter-spacing: 2px;
+            }
+        }
+    }
+    .card-body {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+    }
+    .input-section {
+        display: flex;
+        flex-direction: column;
+        label {
+            color: darken(white, 5%);
+            font-weight: bold;
+            font-size: .7rem;
+        }
+    }
+
 }

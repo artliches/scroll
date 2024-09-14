@@ -1,0 +1,32 @@
+<section class="drift-card">
+    <form [formGroup]="identityForm">
+        <span class="card-title title-input">
+            <h2 (click)="toggleCardBody()">
+                NAME
+            </h2>
+            <input formControlName="name" id="cName" type="text">
+        </span>
+        @if (showCard) {
+            <div class="card-body">
+                <div class="input-section">
+                    <label for="ancestry">ANCESTRY</label>
+                    <input formControlName="ancestry" id="ancestry" type="text">
+                </div>
+                <div class="input-section">
+                    <label for="bGround">BACKGROUND</label>
+                    <input formControlName="bGround" id="bGround" type="text">
+                </div>
+                <div class="input-section">
+                    <label for="cClass">CLASS</label>
+                    <input formControlName="cClass" id="cClass" type="text">
+                </div>
+                <div class="input-section">
+                    <label for="level">LEVEL</label>
+                    <input formControlName="level" id="level" type="number">
+                </div>
+            </div>
+        } @else {
+            {{identityForm.value.ancestry | titlecase}} | {{identityForm.value.cClass | titlecase}} | LEVEL: {{identityForm.value.level}}
+        }
+    </form>
+  </section>
